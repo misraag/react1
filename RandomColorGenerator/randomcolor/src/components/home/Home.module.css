@@ -1,0 +1,14 @@
+.navbar {
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.button {
+    margin: 20px 20px;
+    font-size: 13px;
+    padding: 13px;
+    border-radius: 10px;
+    background-color: rgb(51, 186, 190);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
