@@ -52,8 +52,8 @@ function Home () {
                 <button onClick={ colorType === 'HEX' ? handleRandomHexGenerator : handleRandomRGBGenerator} className={styles.button}>Generate Random Color</button>
             </nav>
             <div style={{backgroundColor: color}} className={styles.division}>
-                <h1>Hello</h1>
-                <h2>dfadsfs</h2>
+                <h1>{colorType}</h1>
+                <h2>{color}</h2>
             </div>
         </div>
     )
