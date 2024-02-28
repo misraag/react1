@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Home.module.css'
 
 function Home () {
@@ -26,8 +26,22 @@ function Home () {
     }
 
     function handleRandomRGBGenerator () {
+        console.log("handling rgb color generator")
+        
+        const r = generateRandomNumber(256);
+        const g = generateRandomNumber(256);
+        const b = generateRandomNumber(256);
+
+        setColor(`rgb(${r},${g},${b})`);
 
     }
+
+    useEffect( () => {
+
+        if(colorType === 'HEX') handleRandomHexGenerator();
+        else handleRandomRGBGenerator();
+
+    }, [colorType]);
 
 
     return (
@@ -37,7 +51,10 @@ function Home () {
                 <button onClick={() => setColorType('RGB')} className={styles.button}>Create RGB</button>
                 <button onClick={ colorType === 'HEX' ? handleRandomHexGenerator : handleRandomRGBGenerator} className={styles.button}>Generate Random Color</button>
             </nav>
-            <div style={{backgroundColor: color}} className={styles.division}></div>
+            <div style={{backgroundColor: color}} className={styles.division}>
+                <h1>Hello</h1>
+                <h2>dfadsfs</h2>
+            </div>
         </div>
     )
 
